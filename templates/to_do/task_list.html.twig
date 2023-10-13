@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sarcinile</title>
+</head>
+<body>
+
+    <h1>Sarcinile</h1>
+   
+        <table>
+            {% for Task in tasks %}
+    
+                <tr>
+                    <th>{{ Task.title }} </th>
+                    <td>{{ Task.dueDate|date('Y-m-d')}}</td> 
+                    <td> &nbsp&nbsp{{ Task.category.name}} <br> </td>
+                    <td><a href="/task/view/{{ Task.id }}"><button>Details</button></a> </td>
+                    <td><a href="/task/update/{{ Task.id }}"><button>Update</button></a> </td>
+                    <td><a href="/task/delete/{{ Task.id }}"><button>Delete</button></a> </td>
+                </tr>
+
+            {% endfor %}  
+        </table>  
+
+        
+
+
+</body>
+</html>

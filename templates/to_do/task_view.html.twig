@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vizualizarea unei sarcini</title>
+</head>
+<body>
+
+    <h1>Vizualizarea unei sarcini</h1>
+    <p><strong>Titlu:</strong> {{ task.title}}</p>
+    <p><strong>Descriere:</strong> {{ task.description}}</p>
+    <p><strong>Data limita:</strong> {{ task.dueDate|date('Y-m-d') }}</p>
+    <p><strong>Data crearii:</strong> {{ task.createdAt|date('Y-m-d H:i:s') }}</p>
+    <p><strong>Categoria:</strong> {{ task.category.name}}</p>
+
+</body>
+</html>
